@@ -31,7 +31,7 @@ plt.ylabel("Distance")
 plt.show()
 
 #  DBSCAN 聚类
-dbscan = DBSCAN(eps=1.5, min_samples=5)
+dbscan = DBSCAN(eps=2.5, min_samples=5)
 labels = dbscan.fit_predict(X_scaled)
 df["DBSCAN_Cluster"] = labels
 mask = labels != -1  # 排除噪声点
